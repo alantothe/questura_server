@@ -11,5 +11,5 @@ package-lock.json
 .env
 .env.local
 
-# Ignore build output (if applicable, e.g., for transpiled code)
+# Ignore build output 
 dist/
