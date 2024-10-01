@@ -10,6 +10,22 @@ A simple Express server built using TypeScript.
 ## Installation
 
 1. Clone the repository:
+   - git clone 
 
-   ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+2. Install the dependencies:
+   - npm install
+
+## Scripts
+
+- **Development** 
+   - npm run dev
+
+- **Build** the project:
+   - npm run build
+
+- **Start** the server (after building):
+   - npm start
+
+## Server
+
+By default, the server will run on http://localhost:3000. 
