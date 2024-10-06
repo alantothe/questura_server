@@ -1,0 +1,52 @@
+{
+  "continent": "South America",
+  "country": "Peru",
+  "countryCarouselPhotos": [
+    "https://res.cloudinary.com/dakv9lakh/image/upload/v1728185270/pexels-hikaique-97906_wm7jcb.jpg",
+    "https://res.cloudinary.com/dakv9lakh/image/upload/v1728185267/miraflores-300_vpnbzb.jpg"
+  ],
+  "sections": {
+    "mission": {
+      "title": "Our Mission in Lima",
+      "content": "Experience the vibrant culture and rich history of Lima while contributing to local community projects and sustainable tourism initiatives.",
+      "photo": "https://res.cloudinary.com/dakv9lakh/image/upload/v1728234253/pexels-icarus-7357663_hn4ejy.jpg"
+    },
+    "overview": {
+      "title": "Lima: City of Kings",
+      "content": "Lima, the capital of Peru, is a bustling metropolis known for its colonial architecture, world-renowned cuisine, and beautiful coastal views.",
+      "photo": "https://res.cloudinary.com/dakv9lakh/image/upload/v1728234253/pexels-icarus-7357663_hn4ejy.jpg"
+    },
+    "group": {
+      "title": "Group Activities in Lima",
+      "content": "Join our guided tours of ancient ruins, participate in Peruvian cooking classes, and engage in community service projects with local organizations.",
+      "photo": "https://res.cloudinary.com/dakv9lakh/image/upload/v1728234253/pexels-icarus-7357663_hn4ejy.jpg"
+    },
+    "explore": {
+      "title": "Discover Lima's Districts",
+      "content": "Explore the diverse neighborhoods of Lima, from the bohemian Barranco to the modern Miraflores, each offering unique experiences and attractions.",
+      "photo": "https://res.cloudinary.com/dakv9lakh/image/upload/v1728234253/pexels-icarus-7357663_hn4ejy.jpg"
+    }
+  },
+  "cities": [
+    {
+      "name": "Miraflores",
+      "photo": "https://res.cloudinary.com/dakv9lakh/image/upload/v1728185271/pexels-jplr-17043071_fit8ym.jpg",
+      "priceInCents": 15000
+    },
+    {
+      "name": "Mega Plaza",
+      "photo": "https://res.cloudinary.com/dakv9lakh/image/upload/v1728185270/Mega_Plaza_Lima_Norte_1_hfhnoi.jpg",
+      "priceInCents": 12000
+    },
+    {
+      "name": "Barranco",
+      "photo": "https://res.cloudinary.com/dakv9lakh/image/upload/v1728234253/pexels-joemcast-19999613_n7mzan.jpg",
+      "priceInCents": 13500
+    },
+    {
+      "name": "Historic Lima",
+      "photo": "https://res.cloudinary.com/dakv9lakh/image/upload/v1728234253/pexels-bill-velapatino-574105235-16932869_hp0gul.jpg",
+      "priceInCents": 14000
+    }
+  ]
+}
