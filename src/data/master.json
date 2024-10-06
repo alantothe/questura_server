@@ -1,0 +1,39 @@
+{
+  "title": "Miraflores Pisco Paradise: Bar Crawl Adventure",
+  "country": "Peru",
+  "city": "Lima",
+  "images": [
+    "https://example.com/miraflores-skyline.jpg",
+    "https://example.com/pisco-sour.jpg",
+    "https://example.com/larcomar-nightlife.jpg"
+  ],
+  "priceInCents": 7500,
+  "about": "Experience the vibrant nightlife of Lima's trendiest district, Miraflores, on this exciting bar crawl. Taste authentic Pisco cocktails, meet fellow travelers, and dance the night away in the best local spots.",
+  "whatToExpect": [
+    "Visit 4 unique bars in Miraflores",
+    "Enjoy a complimentary Pisco Sour at each location",
+    "Learn about Pisco and its importance in Peruvian culture",
+    "Experience Lima's nightlife like a local",
+    "End the night at a popular dance club"
+  ],
+  "duration": "5 hours",
+  "startTime": "8:00 PM",
+  "highlights": [
+    "Taste various Pisco-based cocktails",
+    "Visit the famous Calle de las Pizzas",
+    "Enjoy stunning views of the Pacific Ocean from a rooftop bar",
+    "Skip the line at all venues",
+    "Professional bilingual guide"
+  ],
+  "additionalInformation": [
+    "Must be 18+ to participate",
+    "Includes 4 drinks, one at each venue",
+    "Food not included, but available for purchase",
+    "Wear comfortable shoes for walking",
+    "Bring a valid ID"
+  ],
+  "provider": "Lima Night Tours",
+  "startLocation": "Parque Kennedy",
+  "address": "Diagonal, Miraflores 15074, Peru",
+  "endLocation": "Calle Berlin, Miraflores"
+}
