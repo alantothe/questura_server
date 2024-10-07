@@ -6,7 +6,10 @@ import routes from "./routes/index"
 const app = express()
 const PORT = 4000
 
+app.use(express.json());
+
 app.use("/api", routes)
+
 
 db.on("connected", () => {
     console.clear();

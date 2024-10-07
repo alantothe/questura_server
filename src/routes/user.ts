@@ -1,10 +1,9 @@
-import {Router} from "express"
+import {Router, RequestHandler} from "express"
 import { allUsers, createUser, findUserById } from "../controllers/user"
+import { login, register } from "../controllers/auth"
 const router = Router()
 
-router.get("/all", allUsers)
-router.get("/:_id", findUserById)
-router.post("/register", createUser)
-
+router.post("/auth/register", register as RequestHandler);
+router.post("/auth/login", login as RequestHandler);
 
 export default router;
