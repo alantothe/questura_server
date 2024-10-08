@@ -11,10 +11,14 @@ router.post("/auth/login", login as RequestHandler);
 
 // Google Auth routes
 router.get('/auth/google',
-    passport.authenticate('google', { 
-      scope: ['profile', 'email']
-    })
-  );
+  passport.authenticate('google', { 
+    scope: [
+      'https://www.googleapis.com/auth/userinfo.email',
+      'https://www.googleapis.com/auth/userinfo.profile',
+      'openid'
+    ]
+  })
+);
   
   router.get('/auth/google/callback', 
     passport.authenticate('google', { failureRedirect: '/login' }),

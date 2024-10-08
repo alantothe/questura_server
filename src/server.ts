@@ -1,45 +1,16 @@
 import db from "./mongo/connection"
 import express from "express"
 import routes from "./routes/index"
-import passport from 'passport';
-import session from 'express-session';
-import { configureGoogleAuth, setupGoogleStrategy } from './controllers/auth';
-import User from './models/User';
-
+import { configureGoogleAuth, setupGoogleStrategy } from './plugin/google';
 
 const app = express()
 const PORT = 4000
 
 app.use(express.json());
 
-// Set up session
-app.use(session({
-  secret: process.env.SESSION_SECRET as string,
-  resave: false,
-  saveUninitialized: false
-}));
-
-// Set up Google Strategy
+// set up google strategy and configure auth
 setupGoogleStrategy();
-
-// Set up passport
-app.use(passport.initialize());
-app.use(passport.session());
-
-
-
-passport.serializeUser((user: any, done) => {
-  done(null, user.id);
-});
-
-passport.deserializeUser(async (id: string, done) => {
-  try {
-    const user = await User.findById(id);
-    done(null, user);
-  } catch (error) {
-    done(error);
-  }
-});
+configureGoogleAuth(app);
 
 app.use("/api", routes)
 
