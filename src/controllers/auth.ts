@@ -24,7 +24,7 @@ export const setupGoogleStrategy = () => {
   passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID as string,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-    callbackURL: "http://localhost:4000/api/user/auth/google/callback"
+callbackURL: "http://localhost:4000/api/user/auth/google/callback"
   },
   async (accessToken, refreshToken, profile, done) => {
     try {

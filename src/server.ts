@@ -19,12 +19,14 @@ app.use(session({
   saveUninitialized: false
 }));
 
+// Set up Google Strategy
+setupGoogleStrategy();
+
 // Set up passport
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Set up Google Strategy
-setupGoogleStrategy();
+
 
 passport.serializeUser((user: any, done) => {
   done(null, user.id);
