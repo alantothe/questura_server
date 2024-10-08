@@ -8,6 +8,7 @@ interface IUser extends Document {
   lastName: string;
   email: string;
   password: string;
+  googleId?: string;
 }
 
 const UserSchema: Schema<IUser> = new Schema(
@@ -34,9 +35,14 @@ const UserSchema: Schema<IUser> = new Schema(
       maxlength: 50,
       match: emailPattern,
     },
+    googleId: {
+      type: String,
+      unique: true,
+      sparse: true,
+    },
     password: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
       minlength: 5,
       maxlength: 100,
