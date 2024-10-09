@@ -90,8 +90,6 @@ export const login = async (req: Request<{}, {}, LoginUserDto>, res: Response) =
   }
 };
 
-
-
 //js->ts
 // export const resetPassword = async (req, res) => {
 //   const { token, password } = req.body;
