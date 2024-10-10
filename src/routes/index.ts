@@ -1,7 +1,7 @@
 import {Request, Response, Router} from "express"
 import userRoutes from "./user"
 import packageRoutes from "./package"
-
+import orderRoutes from "./order"
 const router = Router()
 
 router.get("/", (req: Request, res: Response) => {
@@ -10,6 +10,7 @@ router.get("/", (req: Request, res: Response) => {
 
 router.use("/user", userRoutes )
 router.use("/package", packageRoutes)
+router.use("/order", orderRoutes)
 
 
 

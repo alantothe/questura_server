@@ -3,7 +3,6 @@ import { allUsers, createUser, findUserById } from "../controllers/user"
 import { login, register } from "../controllers/auth"
 import passport from 'passport';
 import jwt from 'jsonwebtoken';
-
 const router = Router()
 
 router.post("/auth/register", register as RequestHandler);
@@ -19,8 +18,7 @@ router.get('/auth/google',
     ]
   })
 );
-  
-  router.get('/auth/google/callback', 
+router.get('/auth/google/callback', 
     passport.authenticate('google', { failureRedirect: '/login' }),
     (req, res) => {
       const user = req.user as any;
@@ -30,6 +28,5 @@ router.get('/auth/google',
       };
       const token = jwt.sign(payload, process.env.TOKEN_KEY as string);
       res.json({ token });
-    });
-
+});
 export default router;

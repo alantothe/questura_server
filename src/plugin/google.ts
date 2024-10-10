@@ -29,7 +29,6 @@ export const setupGoogleStrategy = () => {
       }
     }));
   };
-  
   export const configureGoogleAuth = (app: express.Application) => {
     app.use(session({
       secret: process.env.SESSION_SECRET as string,

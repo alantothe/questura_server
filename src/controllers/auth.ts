@@ -2,13 +2,9 @@ import User from "../models/User";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
-import passport from 'passport';
-import session from 'express-session';
-import express from 'express';
 import { CreateUserDto } from "../types/dto/CreateUser.dto";
 import { LoginUserDto } from "../types/dto/LoginUser.dto";
 import { Request, Response } from "express";
-import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 
 dotenv.config();
 
