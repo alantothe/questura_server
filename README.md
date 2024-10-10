@@ -1,4 +1,4 @@
-# TypeScript Express Server
+# Node Express Server
 
 A simple Express server built using TypeScript.
 
