@@ -3,9 +3,7 @@ import https from 'https';
 import checkoutNodeJssdk from '@paypal/checkout-server-sdk';
 
 dotenv.config();
-
-
-// function to set up the paypal environment
+// Add a blank line here
 function environment() {
     const clientId = process.env.PAYPAL_CLIENT_ID;
     const clientSecret = process.env.PAYPAL_CLIENT_SECRET;
@@ -14,8 +12,7 @@ function environment() {
     if (!clientId || !clientSecret) {
       throw new Error('PAYPAL_CLIENT_ID and PAYPAL_CLIENT_SECRET must be defined in environment variables');
     }
-  
-// create and return a sandbox environment
+    // create and return a sandbox environment
     return new checkoutNodeJssdk.core.SandboxEnvironment(clientId, clientSecret);
   }
   
@@ -23,6 +20,8 @@ function environment() {
 function client() {
     return new checkoutNodeJssdk.core.PayPalHttpClient(environment());
   }
+
+
 
 // function to create a paypal order
 export async function createPayPalOrder(value: number, currency: string) {

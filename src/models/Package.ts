@@ -16,6 +16,13 @@ interface ITourPackage extends Document {
   startLocation: string;
   address: string;
   endLocation: string;
+  packageType: 'group' | 'private';
+  scheduleStart: Date;
+  scheduleEnd?: Date;
+  availableDays: ('Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday')[];
+  unavailableDates: Date[];
+  maxCapacity: number;
+  currentBookings: number;
 }
 
 const TourPackageSchema: Schema = new Schema({
@@ -33,7 +40,18 @@ const TourPackageSchema: Schema = new Schema({
   provider: { type: String, required: true },
   startLocation: { type: String, required: true },
   address: { type: String, required: true },
-  endLocation: { type: String, required: true }
+  endLocation: { type: String, required: true },
+  packageType: { type: String, enum: ['group', 'private'], required: true },
+  scheduleStart: { type: Date, required: true },
+  scheduleEnd: { type: Date },
+  availableDays: {
+    type: [String],
+    enum: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    required: true
+  },
+  unavailableDates: { type: [Date] },
+  maxCapacity: { type: Number, required: true },
+  currentBookings: { type: Number, default: 0 }
 });
 
 export default mongoose.model<ITourPackage>('TourPackage', TourPackageSchema);

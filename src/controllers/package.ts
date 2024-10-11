@@ -2,6 +2,7 @@ import {Request, Response} from "express"
 import { ITourPackage } from "../types/dto/ITourPackage.dto"
 import Package from "../models/Package"
 
+
 export async function findPackageById(req: Request, res: Response) {
    const { _id } = req.params
 
@@ -17,4 +18,15 @@ export async function findPackageById(req: Request, res: Response) {
      console.error("Error finding package:", error)
      res.status(500).json({ error: "Internal server error" })
    }
+}
+
+export async function createPackage(req: Request, res: Response) {
+  const reqBody: ITourPackage = req.body;
+  try {
+    const newPackage = await Package.create(reqBody) as ITourPackage;
+    res.status(201).json(newPackage);
+  } catch (error) {
+    console.error("Error creating package:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
 }
